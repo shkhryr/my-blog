@@ -1,0 +1,4 @@
+{% extends 'articles/base.html' %}
+{% block content %}
+    <p id="exit-text">You have been logged out. You can visit <a href="{% url 'home' %}">Home</a> as a guest user or <a href="{% url 'login' %}">Login</a></p>
+{% endblock %}

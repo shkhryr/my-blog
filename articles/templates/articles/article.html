@@ -1,0 +1,28 @@
+{% extends 'articles/base.html' %}
+{% block content %}
+    <div id="article" style="margin-top: 15vh; height: 150vh">
+    <h1>{{ article.title }}</h1>
+        <b>{{ article.date_posted }}</b>
+        <b>{{ article.author }}</b>
+        <p>{{ article.headline }}</p>
+        <p style="text-align: center"><img src="{{ article.image.url }}" style="width: 40vw;"></p>
+        <p>{{ article.text }}</p>
+
+        <div>
+            <a href="{% url 'edit' article.id %}">
+                <svg class="navbar-brand" width="24" height="34" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M31.6133 7.08002L9.25343 37.3067L4.01333 33.32L26.3599 3.10672L31.6133 7.08002ZM3.49328 35.0134L7.78677 38.2933L2.81333 40.48L3.49328 35.0134ZM2.04015 33.1734L0.800049 43.2001L9.95994 39.1467L33.9334 6.74669L26.0133 0.773384L2.04015 33.1734Z" fill="#4D4D4D"/>
+                </svg>
+            </a>
+
+            <a href="{% url 'delete' article.id %}">
+                <svg class="navbar-brand" width="29" height="38" viewBox="0 0 39 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.54668 45.4266L4.5735 13.6266H34.0133L31.0402 45.4266H7.54668ZM35.8402 11.9599H2.7334L6.02663 47.0933H32.56L35.8402 11.9599Z" fill="#4D4D4D"/>
+                    <path d="M14.2932 6.65365C14.4265 4.09365 16.5466 2.06693 19.1333 2.06693C21.72 2.06693 23.84 4.09365 23.9867 6.65365H14.2932ZM19.1333 0.400261C15.6266 0.400261 12.7867 3.17365 12.6401 6.65365H0.52002V8.32031H12.6132H25.6534H38.0534V6.65365H25.6265C25.4799 3.17365 22.64 0.400261 19.1333 0.400261Z" fill="#4D4D4D"/>
+                    <path d="M22.3733 41.5068L24.0264 41.6401L25.9066 17.2401L24.24 17.1068L22.3733 41.5068Z" fill="#4D4D4D"/>
+                    <path d="M12.3599 17.2401L14.2401 41.6401L15.8932 41.5068L14.0265 17.1068L12.3599 17.2401Z" fill="#4D4D4D"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'articles/base.html' %}
+{% load static %}
+{% block header %}
+    <header>
+    <img id="main-banner" src="{% static 'images/banner-desktop.webp' %}">
+    </header>
+{% endblock header %}
+{% block content %}
+
+
+
+    <div class="article-container">
+    <div class="articles">
+      <div class="shit-on-back"></div>
+      <u><h1 style="text-align: center; margin-top: 15vh; margin-bottom: 5vh;" id="article-heading">Articles</h1></u>
+      {% for article in articles %}
+          <div class="article">
+            <img src="{{ article.image.url }}">
+            <div>
+              <div class="author" style="display: flex; align-items: center; margin: 1vw;">
+              <img style="display: inline; border-radius: 50%; width:60px; margin: 2%" src="{{ article.author.profile.profile_image.url }}">
+              <p style="margin: 1vw; border-left: 2px solid black; padding: 1vw;">Author: {{ article.author }}<br>{{ article.date_posted | date:'M d, Y' }}</p>
+              </div>
+              <p style="margin: 1vw 1vw 4vw 1vw;">{{ article.headline }}</p>
+              <a class="button" href="{% url 'article' article.id %}" class="btn">Read Article</a>
+            </div>
+
+          </div>
+        {% endfor %}
+
+    </div>
+    </div>
+{% endblock %}

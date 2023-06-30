@@ -1,0 +1,12 @@
+{% extends 'articles/base.html' %}
+{% block content %}
+            <form method="post" enctype="multipart/form-data" style="margin: 15vh;">
+                {% csrf_token %}
+                    <fieldset>
+                        <div id="form">
+                            {{ form }}
+                        <button class="button btn" href="#" style="text-align: center;" type="submit">Publish</button>
+                        </div>
+                    </fieldset>
+                </form>
+{% endblock %}

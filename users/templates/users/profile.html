@@ -1,0 +1,30 @@
+{% extends 'articles/base.html' %}
+{% block content %}
+<div id="profile-wrapper" style="margin:30% 0 6% 0 ">
+                <div>
+
+                  <div id="profile">
+
+                    <img src="{{ user.profile.profile_image.url }}">
+
+                  </div>
+
+                  <div id="profile-info">
+                      <form method="post">
+                          {% csrf_token %}
+                            <label>Username:</label>
+                            <input type="text" placeholder="Username" value="{{ user.username }}" disabled>
+                            <label>Email:</label>
+                            {{ u_form.email }}
+                            <p>
+                            {{ p_form.profile_image }}
+                            </p>
+                          <a class="button btn" href="{% url 'password_reset' %}" style="text-align: center;">Password Reset</a>
+
+                            <button class="button btn" style="text-align: center;" type="submit">Publish</button>
+                      </form>
+                  </div>
+
+                </div>
+              </div>
+{% endblock %}

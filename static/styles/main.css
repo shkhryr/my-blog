@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+@media only screen and (max-width: 600px)  {
+
+    /*Navigation bar*/
+
+    nav{
+        width: 100%;
+        border: 0.5px solid rgba(204, 204, 204, 0.75);
+        background-color: rgba(240, 240, 240, 0.75);
+        margin: 0 auto;
+        transition: 0.5s;
+
+    }
+
+    .navbar-brand svg{
+        max-width: 4vw;
+        padding: 0;
+        transition: 0.5s;
+
+    }
+    .navbar-brand li{
+        transition: 0.5s;
+        margin: 0 1vw 0 1vw;
+    }
+
+    #main-banner{
+        content:url("/static/images/banner-mobile.webp");
+        width: 100%;
+        transition: 0.5s;
+        margin: 0 auto;
+
+    }
+    #logo{
+        position: absolute;
+        text-align: center;
+        max-width: 100%;
+        margin-top: 3vh;
+    }
+
+    /*Main*/
+
+    main{
+        width: 96%;
+    }
+
+    .articles, .my-card, .my-card > img{
+        width:94%;
+    }
+
+
+
+    .shit-on-back, footer, img{
+        width: 100%;
+
+    }
+
+    footer{
+        padding: 2vh 0 9vh 0;
+    }
+
+    #profile-wrapper{
+        z-index: -2;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+    #profile{
+        width: 40vw;
+        height: 40vw;
+        border-radius: 50%;
+
+        margin: 0 auto;
+    }
+    #profile img{
+        border-radius: 50%;
+        margin: 0 auto;
+        width: 40vw;
+        height: 40vw;
+    }
+
+
+    #profile-info *{
+        display: block;
+        padding: 1%;
+        margin: 0 auto;
+        margin-top: 1vh;
+
+    }
+
+
+
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    /*Navigation bar*/
+
+    nav {
+        width: 64vw;
+        margin: 0 auto;
+        border: 0.5px solid rgba(204, 204, 204, 0.75);
+        background-color: rgba(240, 240, 240, 0.75);
+        transition: 0.5s;
+
+    }
+
+    #main-banner{
+        content:url("/static/images/banner-tablet.webp");
+        width:100%;
+        transition: 0.5s;
+        margin: 0 auto;
+
+
+    }
+
+    #logo{
+        position: absolute;
+        text-align: center;
+        max-width: 100%;
+        margin-top: 3vh;
+
+    }
+
+
+    .navbar-brand svg{
+        width: 2.2vw;
+        background-size: contain;
+        transition: 0.5s;
+
+    }
+    .navbar-brand li{
+        transition: 0.5s;
+        margin: 0 3vw 0 3vw;
+
+    }
+
+    /*Main*/
+
+    main{
+        width: 64%;
+
+    }
+
+    .articles, .my-card, .my-card > img{
+        width:64vw;
+    }
+
+    .my-card > img{
+        width: 63.8vw;
+    }
+
+    .article{
+        display: flex;
+    }
+
+    .shit-on-back, footer{
+        max-width: 100%;
+    }
+
+    .article > div, img {
+        width: 50%;
+    }
+
+    footer{
+        height: 18vh;
+        padding: 3vh;
+    }
+
+    #f-left, #f-right{
+        text-align: center;
+        padding: 0.3vh 2vw;
+        width: 20vw
+    }
+
+    #f-right{
+        float:right
+    }
+
+
+    #profile-wrapper{
+        z-index: -2;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+     #profile{
+        width: fit-content;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    #profile img{
+        border-radius: 50%;
+        margin: 0 auto;
+        width: 30vw;
+        height: 30vw;
+
+    }
+
+    #profile-info *{
+        display: block;
+        padding: 1%;
+        margin: 0 auto;
+        margin-top: 1vh;
+
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+
+    /*Navigation bar*/
+
+    nav {
+        width: 50vw;
+        margin: 0 auto;
+        border: 0.5px solid rgba(204, 204, 204, 0.75);
+        background-color: rgba(240, 240, 240, 0.75);
+        transition: 0.5s;
+
+    }
+
+    .navbar-brand svg{
+        width: 1.5vw;
+        background-size: contain;
+        transition: 0.5s;
+    }
+
+    .navbar-brand li{
+        transition: 0.5s;
+    }
+
+    #main-banner{
+        content:url("/static/images/banner-desktop.webp");
+        max-width: 100vw;;
+        transition: 0.5s;
+        margin: 0 auto;
+
+    }
+
+    #logo{
+        position: absolute;
+        text-align: center;
+        max-width: 100vw;
+        margin-top: 3vh;
+
+    }
+
+    .article > div, img {
+        width: 50%;
+    }
+
+    /*Main*/
+
+    main{
+        /* width: 58vw; */
+        width: 50vw;
+
+    }
+
+    .articles, .my-card, .my-card > img{
+        max-width: 50vw;
+    }
+
+    .my-card > img{
+        max-width: 50vw;
+    }
+
+    .article{
+        display: flex;
+
+    }
+
+    .shit-on-back, footer{
+        max-width: 100vw;
+    }
+
+
+    footer{
+        height: 18vh;
+        padding-top: 3vh;
+    }
+
+    #profile-wrapper{
+        z-index: -2;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #profile{
+        width: fit-content;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: 10vh;
+    }
+    #profile img{
+        top: 10vh;
+        width: 20vw;
+        height: 20vw;
+    }
+
+    #profile-info *{
+        display: block;
+        padding: 1%;
+        margin: 0 auto;
+        margin-top: 1vh;
+
+    }
+}
+
+
+/*Navigation*/
+
+.navbar-brand li{
+    list-style: none;
+    margin: 0 0.5vw 0 0.5vw;
+
+}
+
+.navbar-brand:hover{
+    transition: 0.5s;
+
+}
+
+svg:hover{
+    filter: drop-shadow(4px 4px 5px black);
+}
+
+
+#main-container{
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    position: absolute;
+    text-align: center;
+    width: 98vw;
+}
+
+
+
+#trending{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color:rgb(188, 177, 160);
+    text-decoration: none;
+    color:white;
+    padding: 1.5vh 2vw;
+    transition: 0.5s;
+    margin-bottom: 2vw;
+}
+
+.button:hover{
+    background-color:rgb(223, 210, 191);
+    color: white;
+    transition: 0.5s;
+
+}
+
+.article{
+    background-color: white;
+    border: 0.5px solid rgba(204, 204, 204, 0.75);
+
+}
+
+
+.article-container{
+    display: flex;
+    justify-content: center;
+}
+
+.my-card  p, h3{
+    padding: 1vw;
+
+}
+
+.my-card{
+    background-color: white;
+    border: 0.5px solid rgba(204, 204, 204, 0.75);
+
+
+}
+
+.shit-on-back{
+    background-color: rgb(234, 234, 236);
+    margin-top: 10vh;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    height: 35vh;
+}
+
+.article{
+    margin: 1vw 0 1vw 0;
+}
+
+footer{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(234, 234, 236);
+    max-width: 100vw;;
+}
+
+#main-section{
+    height: 80vh;
+}
+
+#exit-text{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30vh;
+    width: fit-content;
+    margin-bottom: 46.5vh;
+}
+
+
+
+#profile{
+    background-color: rgb(234, 234, 236);
+}
+
+form{
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+#form *{
+    margin: 2vh;
+    display: block;
+    width: 30vw;
+}
+
+textarea{
+    overflow:scroll;
+}
+
+
+
